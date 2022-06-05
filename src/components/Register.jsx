@@ -22,14 +22,14 @@ const Register = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    // const datas = {
-    //   first_name: data.first_name,
-    //   last_name: data.last_name,
-    //   email: data.email,
-    //   password: data.password
-    // }
+    const datas = {
+      first_name: data.first_name,
+      last_name: data.last_name,
+      email: data.email,
+      password: data.password
+    }
 
-    axios.post("", data)
+    axios.post("http://localhost:8080/loginregister/insert.php", datas)
     .then(result => {
       if(result.status === 200){
         navigate('/login')
